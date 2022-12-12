@@ -1,10 +1,11 @@
 # Data Science - Unit 3 | BloomTech
 This is an introduction to the basics of Structured Query Language (SQL) - SQL is the primary tool used to connect to a relational database.
 
-## Assignment - Part 1, Querying a Database
+## Module 1
+### Assignment - Part 1, Querying a Database
 This directory contains a file `rpg_db.sqlite3`, a database for a hypothetical role-playing game. This test data has dozens-to-hundreds of randomly generated characters with various tables holding information about these characters. Also generated are Items, Weapons, and connections between these generated characters. Note that, while the name field was randomized, the numeric and boolean fields were left as defaults.
 
-Use `sqlite3` to load and write queries to explore the data, and answer the following questions. You should store each query as a string and label each as the indicated variable names. Also, store each of these queries in a seperate file named queries.py and either run these queries in the file or import them into another:
+Use `sqlite3` to load and write queries to explore the data, and answer the following questions. You should store each query as a string and label each as the indicated variable names. Also, store each of these queries in a separate file named queries.py and either run these queries in the file or import them into another:
 
 - `TOTAL_CHARACTERS`: How many total Characters are there?
 - `TOTAL_SUBCLASS`: How many of each specific subclass (the necromancer table)?
@@ -21,7 +22,7 @@ You can use the DB Browser or other tools to explore the data and work on your q
 
 Some of these queries are challenging - that's OK! You can keep working on them tomorrow as well (we'll visit loading the same data into PostgreSQL). It's also OK to figure out the results partially with a query and partially with a bit of logic or math afterwards, though doing things purely with SQL is a good goal. Subqueries and aggregation functions may be helpful for putting together more complicated queries.
 
-## Assigment - Part 2, Making and populating a Database
+### Assigment - Part 2, Making and populating a Database
 Load the data (use `pandas`) from the provided file `buddymove_holidayiq.csv` (the [BuddyMove Data Set]('https://archive.ics.uci.edu/ml/datasets/BuddyMove+Data+Set')) - you should have 249 rows, 7 columns, and no missing values. The data reflects the number of place reviews by given users across a variety of categories (sports, parks, malls, etc.).
 
 Using the standard `sqlite3` module:
@@ -38,8 +39,16 @@ Your code (to reproduce all above steps) should be saved in `buddymove_holidayiq
 
 When you submit your files to Canvas you should upload `queries.py`, `buddymove_holidayiq.py`, and `buddymove_holidayiq.sqlite3`.
 
+## Module 2
+
+### Assignment
+Reproduce (debugging as needed) the live lecture task of setting up and inserting the RPG data into a PostgreSQL database. We walked through most of these steps in lesson but see if you can finish moving the `charactercreator_character` table.
+
+Next, set up a new table for the Titanic data (`titanic.csv`) - spend some time thinking about the schema to make sure it is appropriate for the columns. Enumerated types may be useful. Once it is set up, write a `insert_titanic.py` script that uses `psycopg2` to connect to and upload the data from the csv. Then add the file to your repo. Finally, start writing PostgreSQL queries to explore the data!
+
+Please upload the `insert_titanic.py` python file to Canvas.
+
 
 ## Authors
 
 - [@jianninapinto](https://www.github.com/jianninapinto)
-
